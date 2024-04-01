@@ -1,0 +1,17 @@
+- urls:
+    - https://zenn.dev/phoepsilonix/feed
+  template: |-
+    {{range . -}}
+      * ![](./icon/zenn.svg) [{{ .Title }}]({{ .Link }})
+    {{ end }}
+  limit: 5
+  sort_by_published: true
+- urls:
+    - https://qiita.com/phoepsilonix/feed
+  template: |-
+
+    {{range . -}}
+      * ![](./icon/qiita.svg) [{{ .Title }}]({{ .Link }})
+    {{ end }}
+  limit: 5
+  sort_by_published: true
