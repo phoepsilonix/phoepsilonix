@@ -15,9 +15,9 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-#    - uses: webfactory/ssh-agent@v0.8.0
-#      with:
-#        ssh-private-key: ${{ secrets.PRIVATE_REPO_SSH_KEY }}
+    - uses: webfactory/ssh-agent@v0.9.0
+      with:
+        ssh-private-key: ${{ secrets.PRIVATE_REPO_SSH_KEY }}
 
 #    - name: Import bot's GPG key for signing commits
 #      id: import-gpg
