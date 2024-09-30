@@ -29,7 +29,7 @@ jobs:
 #        git_user_signingkey: true
 #        git_commit_gpgsign: true
 
-    - uses: actions/setup-go@v4
+    - uses: actions/setup-go@v5
       id: setup-go
       with:
         go-version-file: ./go.mod
