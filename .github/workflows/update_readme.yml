@@ -26,10 +26,11 @@ jobs:
         gpg_private_key: ${{ secrets.BOT_GPG_PRIVATE_KEY }}
         passphrase: ${{ secrets.BOT_GPG_PASSPHRASE }}
 
-    - uses: actions/setup-go@v5
-      id: setup-go
+    - name: Set up Go
+      uses: actions/setup-go@0aaccfd150d50ccaeb58ebd88d36e91967a5f35b # v5.4.0
       with:
-        go-version-file: ./go.mod
+        go-version: 'stable'
+        cache: true
 
     - name: Install feedsnippet
       run: go install github.com/ikawaha/feedsnippet@latest
